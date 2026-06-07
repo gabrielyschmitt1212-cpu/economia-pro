@@ -9,12 +9,47 @@
 <body>
 
     <div class="card">
+
         <h1>📈 Economia PRO</h1>
 
-        <p>Meu novo site está funcionando!</p>
+        <p>Calculadora de Média</p>
 
-        <button>Começar</button>
+        <input id="n1" type="number" placeholder="Nota 1">
+
+        <br><br>
+
+        <input id="n2" type="number" placeholder="Nota 2">
+
+        <br><br>
+
+        <input id="n3" type="number" placeholder="Nota 3">
+
+        <br><br>
+
+        <button onclick="calcularMedia()">
+            Calcular Média
+        </button>
+
+        <p id="resultado"></p>
+
     </div>
+
+    <script>
+
+    function calcularMedia(){
+
+        let n1 = Number(document.getElementById("n1").value);
+        let n2 = Number(document.getElementById("n2").value);
+        let n3 = Number(document.getElementById("n3").value);
+
+        let media = (n1 + n2 + n3) / 3;
+
+        document.getElementById("resultado").innerHTML =
+            "Média = " + media.toFixed(2);
+
+    }
+
+    </script>
 
 </body>
 
